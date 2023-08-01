@@ -4,11 +4,12 @@ import "fmt"
 
 func main() {
 
+	// di golang tidak boleh ada variabel yang tidak digunakan
 	// deklarasi variabel beserta tipe data dan menggunakan var
-  var firstName string = "john"
+	var firstName string = "john"
 	firstName = "johan" // variabel firstName dapat diubah nilainya
-  var lastName string
-  lastName = "wick"
+	var lastName string
+	lastName = "wick"
 
 	// deklarasi variabel tanpa tipe data
 	country := "Indonesia"
@@ -31,8 +32,8 @@ func main() {
 
 	// deklarasi variable menggunakan keyword new
 	name := new(string)
-	fmt.Println(name)   // 0x20818a220
-	fmt.Println(*name)  // ""
+	fmt.Println(name)  // 0x20818a220
+	fmt.Println(*name) // ""
 
 	// deklarasi variable menggunakan keyword make
 	// digunakan untuk membuat slice, map, dan channel
@@ -42,7 +43,6 @@ func main() {
 	kota[1] = "Bandung"
 	fmt.Println(kota)
 
-
 	//data type conversion
 	var age int8 = 22
 	var age64 int64 = int64(age)
@@ -51,8 +51,7 @@ func main() {
 
 	fmt.Println(age, age64, h, h8)
 
-
-  fmt.Printf("halo %s %s!\n", firstName, lastName) // %s => string
+	fmt.Printf("halo %s %s!\n", firstName, lastName) // %s => string
 	fmt.Printf("halo john wick!\n")
-	fmt.Println("halo", firstName, lastName + "!")
+	fmt.Println("halo", firstName, lastName+"!")
 }
