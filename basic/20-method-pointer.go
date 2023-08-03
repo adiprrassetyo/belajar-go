@@ -30,11 +30,11 @@ func main() {
 	fmt.Println("s1 after changeName2", s1.name)
 	// ethan hunt
 
-	// pengaksesan method dari variabel objek biasa
-	var s3 = student{"john wick", 21}
-	s3.sayHello() // john wick
+	// // pengaksesan method dari variabel objek biasa
+	// var s3 = student{"john wick", 21}
+	// s3.sayHello() // john wick
 
-	// pengaksesan method dari variabel objek pointer
-	var s2 = &student{"ethan hunt", 22}
-	s2.sayHello() // ethan hunt
+	// // pengaksesan method dari variabel objek pointer
+	// var s2 = &student{"ethan hunt", 22}
+	// s2.sayHello() // ethan hunt
 }
