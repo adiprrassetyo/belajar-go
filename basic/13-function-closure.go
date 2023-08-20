@@ -54,7 +54,7 @@ func main() {
 	fmt.Println(sum(1, 2))
 
 	//
-	name := "Eko"
+	name := "Adi"
 	counter := 0
 
 	increment := func() {
@@ -68,6 +68,6 @@ func main() {
 	increment()
 
 	fmt.Println(counter) // 2
-	fmt.Println(name)    // Eko
+	fmt.Println(name)    // Adi
 
 }

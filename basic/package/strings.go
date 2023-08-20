@@ -6,15 +6,15 @@ import (
 )
 
 func main() {
-	fmt.Println(strings.Contains("Eko Kurniawan", "Eko"))
-	fmt.Println(strings.Contains("Eko Kurniawan", "Budi"))
+	fmt.Println(strings.Contains("Adi Kurniawan", "Adi"))
+	fmt.Println(strings.Contains("Adi Kurniawan", "Budi"))
 
-	fmt.Println(strings.Split("Eko Kurniawna Khannedy", " "))
+	fmt.Println(strings.Split("Adi Kurniawna Prasetyo", " "))
 
-	fmt.Println(strings.ToLower("Eko Kurniawan Khannedy"))
-	fmt.Println(strings.ToUpper("Eko Kurniawan Khannedy"))
-	fmt.Println(strings.ToTitle("eko kurniawan khannedy"))
+	fmt.Println(strings.ToLower("Adi Kurniawan Prasetyo"))
+	fmt.Println(strings.ToUpper("Adi Kurniawan Prasetyo"))
+	fmt.Println(strings.ToTitle("Adi kurniawan Prasetyo"))
 
-	fmt.Println(strings.Trim("      Eko Kurniawan     ", " "))
-	fmt.Println(strings.ReplaceAll("Eko Joko Eko", "Eko", "Budi"))
+	fmt.Println(strings.Trim("      Adi Kurniawan     ", " "))
+	fmt.Println(strings.ReplaceAll("Adi Joko Adi", "Adi", "Budi"))
 }

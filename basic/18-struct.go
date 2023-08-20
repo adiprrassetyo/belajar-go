@@ -26,17 +26,17 @@ func (a Customer) sayHuuu() {
 }
 
 func main() {
-	var eko Customer
-	eko.Name = "Eko"
-	eko.Address = "Indonesia"
-	eko.Age = 30
+	var Adi Customer
+	Adi.Name = "Adi"
+	Adi.Address = "Indonesia"
+	Adi.Age = 30
 
-	eko.sayHi("Joko")
-	eko.sayHuuu()
+	Adi.sayHi("Joko")
+	Adi.sayHuuu()
 
-	fmt.Println(eko.Name)
-	fmt.Println(eko.Address)
-	fmt.Println(eko.Age)
+	fmt.Println(Adi.Name)
+	fmt.Println(Adi.Address)
+	fmt.Println(Adi.Age)
 
 	joko := Customer{
 		Name:    "Joko",

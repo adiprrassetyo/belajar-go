@@ -51,7 +51,7 @@ func main() {
 	}
 
 	//1
-	sample := Sample{"Eko"}
+	sample := Sample{"Adi"}
 
 	var sampleType reflect.Type = reflect.TypeOf(sample)
 
@@ -63,6 +63,6 @@ func main() {
 	sample.Name = ""
 	fmt.Println(IsValid(sample))
 
-	contoh := ContohLagi{"Eko", "Oke"}
+	contoh := ContohLagi{"Adi", "Oke"}
 	fmt.Println(IsValid(contoh))
 }

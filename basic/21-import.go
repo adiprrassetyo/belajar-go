@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	helper.SayHello("Eko") // dapat diakses karena huruf awalnya besar (public)
-	// helper.sayGoodbye("Eko") // error karena huruf awalnya kecil (private)
+	helper.SayHello("Adi") // dapat diakses karena huruf awalnya besar (public)
+	// helper.sayGoodbye("Adi") // error karena huruf awalnya kecil (private)
 	fmt.Println(helper.Application)
 	// fmt.Println(helper.version) // error
 

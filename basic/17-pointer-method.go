@@ -15,8 +15,8 @@ func (man *Man) Married() {
 } // harus memakai pointer agar bisa mengubah nilai asli
 
 func main() {
-	eko := Man{"Eko"}
-	eko.Married()
+	Adi := Man{"Adi"}
+	Adi.Married()
 
-	fmt.Println(eko.Name) //jika tidak memakai pointer, maka hasilnya tetap Eko, jika memakai pointer, maka hasilnya Mr. Eko
+	fmt.Println(Adi.Name) //jika tidak memakai pointer, maka hasilnya tetap Adi, jika memakai pointer, maka hasilnya Mr. Adi
 }

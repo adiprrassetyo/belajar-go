@@ -7,7 +7,7 @@ func sayHelloTo(firstName string, lastName string) {
 }
 
 func main() {
-	firstName := "Eko"
+	firstName := "Adi"
 	sayHelloTo(firstName, "Kurniawan")
 	sayHelloTo("Budi", "Nugraha")
 }

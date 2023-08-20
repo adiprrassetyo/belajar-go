@@ -8,9 +8,9 @@ import (
 func main() {
 	data := list.New()
 
-	data.PushBack("Eko")
+	data.PushBack("Adi")
 	data.PushBack("Kurniawan")
-	data.PushBack("Khannedy")
+	data.PushBack("Prasetyo")
 	data.PushFront("Budi")
 
 	// dari depan ke belakang

@@ -26,12 +26,12 @@ func main() {
 	}
 
 	registerUser("admin", blacklist)
-	registerUser("eko", blacklist)
+	registerUser("Adi", blacklist)
 
 	registerUser("root", func(name string) bool {
 		return name == "root"
 	})
-	registerUser("eko", func(name string) bool {
+	registerUser("Adi", func(name string) bool {
 		return name == "root"
 	})
 }
