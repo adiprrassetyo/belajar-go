@@ -8,6 +8,6 @@ func sayHelloTo(firstName string, lastName string) {
 
 func main() {
 	firstName := "Adi"
-	sayHelloTo(firstName, "Kurniawan")
+	sayHelloTo(firstName, "Syahputra")
 	sayHelloTo("Budi", "Nugraha")
 }

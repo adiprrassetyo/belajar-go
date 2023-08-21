@@ -9,7 +9,7 @@ func main() {
 	data := list.New()
 
 	data.PushBack("Adi")
-	data.PushBack("Kurniawan")
+	data.PushBack("Syahputra")
 	data.PushBack("Prasetyo")
 	data.PushFront("Budi")
 

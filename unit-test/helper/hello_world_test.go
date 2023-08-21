@@ -20,12 +20,12 @@ func BenchmarkTable(b *testing.B) {
 			request: "Adi",
 		},
 		{
-			name:    "Kurniawan",
-			request: "Kurniawan",
+			name:    "Syahputra",
+			request: "Syahputra",
 		},
 		{
-			name:    "AdiKurniawanPrasetyo",
-			request: "Adi Kurniawan Prasetyo",
+			name:    "AdiSyahputraPrasetyo",
+			request: "Adi Syahputra Prasetyo",
 		},
 		{
 			name:    "Budi",
@@ -49,9 +49,9 @@ func BenchmarkSub(b *testing.B) {
 			HelloWorld("Adi")
 		}
 	})
-	b.Run("Kurniawan", func(b *testing.B) {
+	b.Run("Syahputra", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
-			HelloWorld("Kurniawan")
+			HelloWorld("Syahputra")
 		}
 	})
 }
@@ -64,9 +64,9 @@ func BenchmarkHelloWorld(b *testing.B) {
 }
 
 // unit test benchmark
-func BenchmarkHelloWorldKurniawan(b *testing.B) {
+func BenchmarkHelloWorldSyahputra(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		HelloWorld("Kurniawan")
+		HelloWorld("Syahputra")
 	}
 }
 
@@ -83,9 +83,9 @@ func TestTableHelloWorld(t *testing.T) {
 			expected: "Hello Adi",
 		},
 		{
-			name:     "Kurniawan",
-			request:  "Kurniawan",
-			expected: "Hello Kurniawan",
+			name:     "Syahputra",
+			request:  "Syahputra",
+			expected: "Hello Syahputra",
 		},
 		{
 			name:     "Prasetyo",
@@ -118,9 +118,9 @@ func TestSubTest(t *testing.T) {
 		result := HelloWorld("Adi")
 		require.Equal(t, "Hello Adi", result, "Result must be 'Hello Adi'")
 	})
-	t.Run("Kurniawan", func(t *testing.T) {
-		result := HelloWorld("Kurniawan")
-		require.Equal(t, "Hello Kurniawan", result, "Result must be 'Hello Kurniawan'")
+	t.Run("Syahputra", func(t *testing.T) {
+		result := HelloWorld("Syahputra")
+		require.Equal(t, "Hello Syahputra", result, "Result must be 'Hello Syahputra'")
 	})
 	t.Run("Prasetyo", func(t *testing.T) {
 		result := HelloWorld("Prasetyo")
@@ -186,13 +186,13 @@ func TestHelloWorldPrasetyo(t *testing.T) {
 	fmt.Println("TestHelloWorldPrasetyo Done")
 }
 
-func TestHelloWorldKurniawan(t *testing.T) {
-	result := HelloWorld("Kurniawan")
+func TestHelloWorldSyahputra(t *testing.T) {
+	result := HelloWorld("Syahputra")
 
-	if result != "Hello Kurniawan" {
+	if result != "Hello Syahputra" {
 		// error
-		t.Fatal("Result must be 'Hello Kurniawan'")
+		t.Fatal("Result must be 'Hello Syahputra'")
 	}
 
-	fmt.Println("TestHelloWorldKurniawan Done")
+	fmt.Println("TestHelloWorldSyahputra Done")
 }
