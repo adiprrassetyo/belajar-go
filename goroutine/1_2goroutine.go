@@ -33,4 +33,4 @@ func main() {
 // 4 halo
 // 5 halo
 
-// hasil ekseskusi pertama dan kedua bisa berbeda karena goroutine berjalan secara asynchronous (tidak berurutan) dan tidak bisa diprediksi. tergantung dari scheduler yang ada di runtime go. atau bisa juga diakibatkan oleh perbedaan jumlah core yang digunakan.
+// hasil ekseskusi pertama dan kedua bisa berbeda karena main berjalan secara asynchronous (tidak berurutan) dan tidak bisa diprediksi. tergantung dari scheduler yang ada di runtime go. atau bisa juga diakibatkan oleh perbedaan jumlah core yang digunakan.

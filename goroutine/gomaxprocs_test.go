@@ -1,4 +1,4 @@
-package goroutine
+package main
 
 import (
 	"fmt"
@@ -6,6 +6,9 @@ import (
 	"sync"
 	"testing"
 	"time"
+	
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func TestGetGomaxprocs(t *testing.T) {
@@ -24,8 +27,8 @@ func TestGetGomaxprocs(t *testing.T) {
 	totalThread := runtime.GOMAXPROCS(-1)
 	fmt.Println("Total Thread", totalThread)
 
-	totalGoroutine := runtime.NumGoroutine()
-	fmt.Println("Total Goroutine", totalGoroutine)
+	totalmain := runtime.Nummain()
+	fmt.Println("Total main", totalmain)
 
 	group.Wait()
 }
@@ -47,8 +50,8 @@ func TestChangeThreadNumber(t *testing.T) {
 	totalThread := runtime.GOMAXPROCS(-1)
 	fmt.Println("Total Thread", totalThread)
 
-	totalGoroutine := runtime.NumGoroutine()
-	fmt.Println("Total Goroutine", totalGoroutine)
+	totalmain := runtime.Nummain()
+	fmt.Println("Total main", totalmain)
 
 	group.Wait()
 }

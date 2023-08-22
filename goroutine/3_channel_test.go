@@ -1,10 +1,13 @@
-package goroutine
+package main
 
 import (
 	"fmt"
 	"strconv"
 	"testing"
 	"time"
+	
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 // 1.channel

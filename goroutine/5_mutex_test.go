@@ -1,13 +1,16 @@
-package goroutine
+package main
 
 import (
 	"fmt"
 	"sync"
 	"testing"
 	"time"
+	
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
-// mutex adalah mutual exclusion, artinya hanya satu goroutine yang bisa mengakses data pada satu waktu, solusi atas race condition
+// mutex adalah mutual exclusion, artinya hanya satu main yang bisa mengakses data pada satu waktu, solusi atas race condition
 // 1
 func TestMutex(t *testing.T) {
 	x := 0
@@ -27,7 +30,7 @@ func TestMutex(t *testing.T) {
 	fmt.Println("Counter = ", x)
 }
 
-// RWMutex adalah mutex yang bisa dibaca oleh banyak goroutine, tapi hanya bisa ditulis oleh satu goroutine
+// RWMutex adalah mutex yang bisa dibaca oleh banyak main, tapi hanya bisa ditulis oleh satu main
 // 2
 type BankAccount struct {
 	RWMutex sync.RWMutex
@@ -47,7 +50,7 @@ func (account *BankAccount) GetBalance() int {
 	return balance
 }
 
-// RWMutex cocok digunakan untuk kasus dimana ada banyak goroutine yang membaca data, tapi jarang ada goroutine yang menulis data
+// RWMutex cocok digunakan untuk kasus dimana ada banyak main yang membaca data, tapi jarang ada main yang menulis data
 func TestRWMutex(t *testing.T) {
 	account := BankAccount{}
 
@@ -69,6 +72,7 @@ func TestRWMutex(t *testing.T) {
 	// dan total ballance nya bisa berkurang dari 10000
 }
 
+// 2
 type UserBalance struct {
 	sync.Mutex
 	Name    string
@@ -95,7 +99,7 @@ func Transfer(user1 *UserBalance, user2 *UserBalance, amount int) {
 	time.Sleep(1 * time.Second)
 
 	user2.Lock()
-	fmt.Println("Lock user2", user2.Name)
+	fmt.Println("Lock user2", user2.Name) // deadlock terjadi disini karena user2 sudah di lock oleh main lain (Transfer) sebelumnya dan tidak di unlock lagi oleh main tersebut sehingga main ini tidak bisa melanjutkan prosesnya (Lock user2) dan terjadi deadlock (main ini tidak bisa di terminate) sehingga program tidak bisa berjalan sampai selesai (tidak bisa mencetak hasil akhir) dan harus di terminate secara paksa (ctrl + c) dan akan muncul error "signal: killed" di terminal (jika dijalankan di terminal) atau "signal: process terminated" di console (jika dijalankan di vscode)
 	user2.Change(amount)
 
 	time.Sleep(1 * time.Second)
